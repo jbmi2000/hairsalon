@@ -1,0 +1,5 @@
+class Hairsalon::Hairsalon
+
+
+    
+end

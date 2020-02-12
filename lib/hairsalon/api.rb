@@ -1,0 +1,3 @@
+class Hairsalon::API
+    
+end
