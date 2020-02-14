@@ -10,6 +10,5 @@ class Hairsalon::HairsalonController
         input = gets.strip
         
     end
-
     
 end
