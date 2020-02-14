@@ -1,6 +1,6 @@
 class Hairsalon::HairsalonController
 
-    # def initialize
+    # def initialize   everything puts'ed out from this class only.  And only user input in this class.
     #    self.run
     # end
 
