@@ -1,9 +1,10 @@
 class Hairsalon::Scraper
-
-    def styles
-        styles = []
-        doc = Nokogiri::HTML(open "https://bchicsalon.com/copy-of-services/ ")   
     
+    def styles
+        html = "http://cieloshairdesign.com/our_services"
+        doc = Nokogiri::HTML(open(html))   
+        
+       
     end
-    # binding.pry
+    binding.pry
 end
