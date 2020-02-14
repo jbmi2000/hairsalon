@@ -5,12 +5,11 @@ class Hairsalon::HairsalonController
     # end
 
     def run
-        puts "Welcome to your Hair Salon Experience"
+        puts "Welcome to your Hair Salon Experience\n\n"
         puts "Please select option 1, 2, or 3 for more information"
         input = gets.strip
         
     end
-
 
     
 end
