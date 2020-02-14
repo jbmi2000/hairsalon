@@ -6,5 +6,5 @@ class Hairsalon::Scraper
         
        
     end
-    binding.pry
+    # binding.pry
 end

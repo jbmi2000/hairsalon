@@ -4,6 +4,8 @@ source "https://rubygems.org"
 # gemspec
 gem 'pry'
 gem 'httparty'
+gem 'nokogiri'
+
 gem 'wix-apps', '~> 1.0.0'
 
 gem "rake", "~> 12.0"
