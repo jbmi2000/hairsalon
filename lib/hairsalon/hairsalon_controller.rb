@@ -15,10 +15,6 @@ class Hairsalon::HairsalonController
     end
 
     def get_services_menu
-        # to be scraped
-        Hairsalon::Service.new("Haircut")
-        Hairsalon::Service.new("Chemical Service")
-        Hairsalon::Service.new("Makeup")
         @services = Hairsalon::Service.all
         #binding.pry
        

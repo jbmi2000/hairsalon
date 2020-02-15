@@ -11,6 +11,7 @@ class Hairsalon::Service
    @@all = []
 
     def self.all
+        Hairsalon::Scraper.scrape_services
         @@all
     end
 
