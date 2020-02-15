@@ -31,9 +31,17 @@ class Hairsalon::HairsalonController
     def get_user_input
         puts "\nEnter your selection here: " 
         input = (gets.strip).to_i
-        binding.pry
-        
-    
+        # binding.pry
+
+        # if valid_entry(input) 
+        #     input <= @services.length && input < 0
+        # end        
+           
+    end
+
+    def valid_entry(input, data)
+        input <= data.length && input > 0
+
     end
 
     
