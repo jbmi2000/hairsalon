@@ -5,12 +5,14 @@ class Hairsalon::Scraper
         doc = Nokogiri::HTML(open(html))   
          
         list = []
-        list << doc.css("div.et_pb_text_inner h2").text
+        list << doc.css("div.et_pb_text_inner h2")
         
         list.each do |l|
+            name = l.text
             Hairsalon::Service.new(name)
+           # binding.pry
         end
-        binding.pry
+         
     end
     # binding.pry
 end
