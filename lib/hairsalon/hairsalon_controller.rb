@@ -8,6 +8,8 @@ class Hairsalon::HairsalonController
         puts "Welcome to your Hair Salon Experience\n\n"
         puts "Please select option 1, 2, or 3 for more information"
         get_services_menu
+        list_services_menu
+        get_user_input
         # input = gets.strip
 
         
@@ -16,21 +18,18 @@ class Hairsalon::HairsalonController
     def get_services_menu
         # to be scraped
         @services = ['Haircut', 'Chemical Service', 'Makeup'] 
+       
+    end
+
+    def list_services_menu
         @services.each_with_index do |service, index|
             # binding.pry
             puts "#{index + 1}. #{service}"
         end
-
-        
-
-
+    
     end
 
-    def menu
-      
-           
-       
-    
+    def get_user_input
     
     end
 
