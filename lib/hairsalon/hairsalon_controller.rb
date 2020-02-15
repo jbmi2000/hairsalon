@@ -30,7 +30,7 @@ class Hairsalon::HairsalonController
     end
 
     def get_user_input
-        puts "\nEnter your selection here: " 
+        puts "\nEnter your selection here:\n\n " 
         input = (gets.strip).to_i
         # integer(input)
         # binding.pry
