@@ -22,7 +22,7 @@ class Hairsalon::HairsalonController
 
     def list_services_menu
         puts "Please select option 1, 2, or 3 for more information:\n\n"
-        @services.each_with_index do |service, index|
+        @services.each.with_index(1) do |service, index|
             # binding.pry
             puts "#{index + 1}. #{service.name}"
         end

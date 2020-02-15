@@ -4,18 +4,17 @@ class Hairsalon::Service
 
     def initialize(name)
         @name = name
-        save 
+        @@all << self
     end
 
    # @@all = ['Haircut', 'Chemical Service', 'Makeup'] 
    @@all = []
 
     def self.all
-        Hairsalon::Scraper.scrape_services
+        Hairsalon::Scraper.scrape_services if @@all.empty?
         @@all
+      
+      #  binding.pry
     end
 
-    def save
-        @@all << self
-    end
 end
