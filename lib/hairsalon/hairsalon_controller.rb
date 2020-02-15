@@ -16,7 +16,7 @@ class Hairsalon::HairsalonController
 
     def get_services_menu
         # to be scraped
-        @services = ['Haircut', 'Chemical Service', 'Makeup'] 
+        @services = Hairsalon::Service.all
        
     end
 
@@ -30,7 +30,7 @@ class Hairsalon::HairsalonController
     end
 
     def get_user_input
-        puts "\nEnter your selection here:\n\n " 
+        puts "\nEnter your selection here:\n" 
         input = (gets.strip).to_i
         # integer(input)
         # binding.pry
@@ -46,7 +46,7 @@ class Hairsalon::HairsalonController
 
     def display_selection(input)
         service = @services[input - 1]
-        puts "You have chosen to receive the following service: \n\n"
+        puts "\nYou have chosen to receive the following service: \n\n"
         puts "#{service}\n\n"
         puts "Would you like book your service today?\n\n"
     
