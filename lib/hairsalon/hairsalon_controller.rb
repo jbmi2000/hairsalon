@@ -51,5 +51,6 @@ class Hairsalon::HairsalonController
     
     end
 
+
     
 end

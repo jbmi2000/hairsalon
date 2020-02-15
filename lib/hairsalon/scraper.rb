@@ -3,21 +3,18 @@ class Hairsalon::Scraper
     def self.scrape_services
         html = "http://cieloshairdesign.com/our_services"
         doc = Nokogiri::HTML(open(html))   
-         
-        # list = []
-        # list << doc.css("div.et_pb_text_inner h2")
-        
-        doc.css("div.et_pb_text_inner h2").slice(0..3).each do |items|
-            name = items.text
-            Hairsalon::Service.new(name)
+                
+        doc.css("div.et_pb_text_inner ul li").slice(0..6).each do |items| 
+             name = items.text
+             Hairsalon::Service.new(name)
         end
+    
+    
 
-        # list.each do |l|
-        #     name = l.text
-        #     Hairsalon::Service.new(name)
-        #    # binding.pry
-        # end
-         
-    end
+     end
+     # binding.pry
+
+   
+
     # binding.pry
 end
