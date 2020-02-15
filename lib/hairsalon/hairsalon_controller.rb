@@ -1,5 +1,6 @@
 class Hairsalon::HairsalonController
 
+     
     # def initialize   everything puts'ed out from this class only.  And only user input in this class.
     #    self.run
     # end
@@ -31,18 +32,24 @@ class Hairsalon::HairsalonController
     def get_user_input
         puts "\nEnter your selection here: " 
         input = (gets.strip).to_i
-        binding.pry
+        # integer(input)
+        # binding.pry
 
-        # if valid_entry(input) 
-        #     input <= @services.length && input < 0
-        # end        
+        display_selection(input) if valid_entry(input, @services)       
            
     end
 
     def valid_entry(input, data)
-        input <= data.length && input > 0
+        input.to_i <= data.length && input.to_i > 0
 
-        
+    end
+
+    def display_selection(input)
+        service = @services[input - 1]
+        puts "You have chosen to receive the following service: \n\n"
+        puts "#{service}\n\n"
+        puts "Would you like book your service today?\n\n"
+    
     end
 
     
