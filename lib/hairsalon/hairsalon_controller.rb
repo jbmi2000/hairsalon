@@ -16,7 +16,11 @@ class Hairsalon::HairsalonController
 
     def get_services_menu
         # to be scraped
+        Hairsalon::Service.new("Haircut")
+        Hairsalon::Service.new("Chemical Service")
+        Hairsalon::Service.new("Makeup")
         @services = Hairsalon::Service.all
+        #binding.pry
        
     end
 
@@ -24,7 +28,7 @@ class Hairsalon::HairsalonController
         puts "Please select option 1, 2, or 3 for more information:\n\n"
         @services.each_with_index do |service, index|
             # binding.pry
-            puts "#{index + 1}. #{service}"
+            puts "#{index + 1}. #{service.name}"
         end
     
     end
@@ -47,7 +51,7 @@ class Hairsalon::HairsalonController
     def display_selection(input)
         service = @services[input - 1]
         puts "\nYou have chosen to receive the following service: \n\n"
-        puts "#{service}\n\n"
+        puts "#{service.name}\n\n"
         puts "Would you like book your service today?\n\n"
     
     end

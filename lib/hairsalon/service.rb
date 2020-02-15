@@ -1,8 +1,20 @@
 class Hairsalon::Service
 
-    @@all = ['Haircut', 'Chemical Service', 'Makeup'] 
+    attr_accessor :name
+
+    def initialize(name)
+        @name = name
+        save 
+    end
+
+   # @@all = ['Haircut', 'Chemical Service', 'Makeup'] 
+   @@all = []
 
     def self.all
         @@all
+    end
+
+    def save
+        @@all << self
     end
 end
