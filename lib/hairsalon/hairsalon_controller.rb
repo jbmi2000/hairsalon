@@ -5,14 +5,12 @@ class Hairsalon::HairsalonController
     # end
 
     def run
-        puts "Welcome to your Hair Salon Experience\n\n"
-        puts "Please select option 1, 2, or 3 for more information"
+        puts "\n\nWelcome to your Hair Salon Experience\n\n"
+        
         get_services_menu
         list_services_menu
         get_user_input
-        # input = gets.strip
-
-        
+                
     end
 
     def get_services_menu
@@ -22,6 +20,7 @@ class Hairsalon::HairsalonController
     end
 
     def list_services_menu
+        puts "Please select option 1, 2, or 3 for more information:\n\n"
         @services.each_with_index do |service, index|
             # binding.pry
             puts "#{index + 1}. #{service}"
@@ -30,6 +29,10 @@ class Hairsalon::HairsalonController
     end
 
     def get_user_input
+        puts "\nEnter your selection here: " 
+        input = (gets.strip).to_i
+        binding.pry
+        
     
     end
 
