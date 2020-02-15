@@ -8,13 +8,7 @@ class Hairsalon::Scraper
              name = items.text
              Hairsalon::Service.new(name)
         end
-    
-    
 
      end
-     # binding.pry
-
-   
-
     # binding.pry
 end

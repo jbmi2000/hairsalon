@@ -20,7 +20,7 @@ class Hairsalon::HairsalonController
     end
 
     def list_services_menu
-        puts "Please select option 1, 2, 3, or 4 for more information:\n\n"
+        puts "Please select option by number for more information:\n\n"
         @services.each_with_index do |service, index|
             # binding.pry
             puts "#{index + 1}. #{service.name}"
@@ -29,7 +29,7 @@ class Hairsalon::HairsalonController
     end
 
     def get_user_input
-        puts "\nEnter your selection here:\n" 
+        puts "\nEnter your selection here:\n\n" 
         input = (gets.strip).to_i
         # integer(input)
         # binding.pry
@@ -47,8 +47,20 @@ class Hairsalon::HairsalonController
         service = @services[input - 1]
         puts "\nYou have chosen to receive the following service: \n\n"
         puts "#{service.name}\n\n"
-        puts "Would you like book your service today?\n\n"
-    
+        puts "Please select Y to book now, N for new selection or E to exit the application:\n\n"
+        entry = gets.strip
+        if entry == "y"
+            #do something
+        elsif entry == "n"
+            puts "\n\nOK\n\n"
+            run
+        elsif entry == "e"
+            puts "\nThank you for using our application!  Hope to see you again soon!\n\n"
+            puts "Please visit on the web at our virtually unscrapable site!\n\n"
+        else
+        end
+
+  
     end
 
 
