@@ -58,7 +58,7 @@ class Hairsalon::HairsalonController
         if entry == "y"
            # binding.pry
            Hairsalon::Appointment.new(@date, @time, @customer, @stylist)
-           puts "Thank you for booking your appointment.  The program will not exit."
+           puts "Thank you for booking your appointment.  The program will now exit."
            # binding.pry 
         elsif entry == "n"
             puts "\n\nOK\n\n"
