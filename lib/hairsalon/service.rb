@@ -7,14 +7,11 @@ class Hairsalon::Service
         @@all << self
     end
 
-  # @@all = ['Haircut', 'Chemical Service', 'Makeup'] 
     @@all = []
 
     def self.all
         Hairsalon::Scraper.scrape_services if @@all.empty?
         @@all
-      
-      #  binding.pry
     end
 
 end

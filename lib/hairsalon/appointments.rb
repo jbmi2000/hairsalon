@@ -16,11 +16,11 @@ class Hairsalon::Appointment
 
     end
 
-    def create_appt
-        Hairsalon::Appointment.new 
-       # binding.pry
+    # def create_appt
+    #     Hairsalon::Appointment.new 
     
-    end
+    
+    # end
 
 
 
