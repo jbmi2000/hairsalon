@@ -38,17 +38,15 @@ class Hairsalon::HairsalonController
         else
             counter = 0 
             puts "Invalid entry.  Please make another selection:\n\n"
-            
             get_user_input
+
+            counter+=1
             
             if counter == 3
                 exit
             else 
             end
-
-
-        end
-                       
+        end                       
     end
 
     def valid_entry(input, data)
