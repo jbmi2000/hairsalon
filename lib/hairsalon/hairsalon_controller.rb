@@ -20,7 +20,8 @@ class Hairsalon::HairsalonController
     end
 
     def list_services_menu
-        puts "Please select option by number for more information:\n\n"
+        puts "Please select your desired service by number.\nThen press the <Enter> key for more information:\n"
+        puts "================================================\n"
         @services.each_with_index do |service, index|
             # binding.pry
             puts "#{index + 1}. #{service.name}"
@@ -31,21 +32,12 @@ class Hairsalon::HairsalonController
     def get_user_input
         puts "\nEnter your selection here:\n\n" 
         input = (gets.strip).to_i
-        # integer(input)
-        # binding.pry        
+
         if valid_entry(input, @services)
             display_selection(input)
         else
-            counter = 0 
             puts "Invalid entry.  Please make another selection:\n\n"
-            get_user_input
-
-            counter+=1
-            
-            if counter == 3
-                exit
-            else 
-            end
+            get_user_input 
         end                       
     end
 
@@ -56,12 +48,18 @@ class Hairsalon::HairsalonController
 
     def display_selection(input)
         service = @services[input - 1]
-        puts "\nYou have chosen to receive the following service: \n\n"
+        puts "\nYou have chosen to receive the f.ollowing service: \n\n"
         puts "#{service.name}\n\n"
-        puts "Please select Y to book now, N for new selection or E to exit the application:\n\n"
+        puts "Please choose from the following options and press <Enter>:"
+        puts "Select Y to book you appointment"
+        puts "select N to make a new selection" 
+        puts "Select E to exit the application"
         entry = gets.strip
         if entry == "y"
-            #do something
+           # binding.pry
+           Hairsalon::Appointment.new(@date, @time, @customer, @stylist)
+           puts "Thank you for booking your appointment.  The program will not exit."
+           # binding.pry 
         elsif entry == "n"
             puts "\n\nOK\n\n"
             run
