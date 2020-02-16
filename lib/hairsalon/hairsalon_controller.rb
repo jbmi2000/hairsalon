@@ -32,10 +32,23 @@ class Hairsalon::HairsalonController
         puts "\nEnter your selection here:\n\n" 
         input = (gets.strip).to_i
         # integer(input)
-        # binding.pry
+        # binding.pry        
+        if valid_entry(input, @services)
+            display_selection(input)
+        else
+            counter = 0 
+            puts "Invalid entry.  Please make another selection:\n\n"
+            
+            get_user_input
+            
+            if counter == 3
+                exit
+            else 
+            end
 
-        display_selection(input) if valid_entry(input, @services)       
-           
+
+        end
+                       
     end
 
     def valid_entry(input, data)
@@ -61,6 +74,12 @@ class Hairsalon::HairsalonController
         end
 
   
+    end
+
+    def exit
+        puts "Sorry you are having trouble.  Please try again later."
+        puts "Don't forget to visit us on our virutally unscrapable website!"
+
     end
 
 
