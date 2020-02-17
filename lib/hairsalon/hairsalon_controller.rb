@@ -66,7 +66,8 @@ class Hairsalon::HairsalonController
 
     def display_selection(input)
         service = @services[input - 1]
-        puts "\nYou may book your appointment from the list of available services above \n\n"
+        puts "\nYou may book your appointment from the list of available services above"
+        puts "========================================================================="
         puts "#{service.name}\n\n"
         puts "Please choose from the following options and press <Enter>:"
         puts "==========================================================="
