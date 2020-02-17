@@ -66,12 +66,12 @@ class Hairsalon::HairsalonController
 
     def display_selection(input)
         service = @services[input - 1]
-        puts "\nYou may book your appointment from the list of available services above"
-        puts "========================================================================="
-        puts "#{service.name}\n\n"
+        puts "\nBook your #{service.name} appointment from the list of services above"
+        puts "=============================================================================\n\n"
+       # puts "#{service.name}\n\n"
         puts "Please choose from the following options and press <Enter>:"
         puts "==========================================================="
-        puts "Select Y to book your appointment"
+        puts "Select Y to book your appointment and exit the application"
         puts "Select N to make a new selection" 
         puts "Select E to exit the application\n"
         entry = gets.strip
