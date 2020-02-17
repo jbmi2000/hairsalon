@@ -4,6 +4,7 @@ class Hairsalon::HairsalonController
         puts "\n\nWelcome to your Hair Salon Experience\n\n"
         
         get_services_menu
+        get_prices_menu
         list_services_menu
         get_user_input
                 
@@ -13,6 +14,11 @@ class Hairsalon::HairsalonController
         @services = Hairsalon::Service.all
        
     end
+
+    def get_prices_menu
+        @prices = Hairsalon::Price.all
+    end
+
 
     def list_services_menu
         puts "Please select your desired service by number, then press <Enter>:\n"
@@ -28,11 +34,29 @@ class Hairsalon::HairsalonController
         input = (gets.strip).to_i
 
         if valid_entry(input, @services)
-            display_selection(input)
+            if input == 1
+                puts Hairsalon::Scraper.scrape_hair_services
+                display_selection(input)
+
+            elsif input == 2
+                puts Hairsalon::Scraper.scrape_color_services
+                display_selection(input)
+
+            elsif input == 3
+                puts Hairsalon::Scraper.scrape_hair_treatment_services
+                display_selection(input)
+
+            elsif input == 4
+                puts Hairsalon::Scraper.scrape_makeup_services                
+                display_selection(input)
+
+            end
+         #   display_selection(input)
         else
             puts "Invalid entry.  Please make another selection:\n\n"
             get_user_input 
-        end                       
+        end 
+        
     end
 
     def valid_entry(input, data)
@@ -42,7 +66,7 @@ class Hairsalon::HairsalonController
 
     def display_selection(input)
         service = @services[input - 1]
-        puts "\nYou have chosen to receive the following service: \n\n"
+        puts "\nYou may book your appointment from the list of available services above \n\n"
         puts "#{service.name}\n\n"
         puts "Please choose from the following options and press <Enter>:"
         puts "==========================================================="
@@ -53,7 +77,6 @@ class Hairsalon::HairsalonController
         if entry == "y"
            Hairsalon::Appointment.new(@date, @time, @customer, @stylist)
            puts "Thank you for booking your appointment.  The program will now exit.\n\n"
-           binding.pry 
         elsif entry == "n"
             puts "\n\nOK\n\n"
             run
