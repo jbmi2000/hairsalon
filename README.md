@@ -1,8 +1,13 @@
 # Hairsalon
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hairsalon`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is responsible for providing a way for customers of a hair salon to be able to see available services and then choose to book an appointment. The services arre broken down into 4 main categories.  They are:
 
-TODO: Delete this and the text above, and describe your gem
+Hair Services
+Color Services
+Hair Treatment Services
+Makeup
+
+This gem makes use of data that has been scraped from a local salon.  As users make a selection from the list of services above, they are presented with a 2nd list that details the services that are available under the seected category.  Customers are then given the option to book an appointment, make a new selection, or exit the application. 
 
 ## Installation
 
@@ -22,7 +27,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use this gem, 
+1. Type bin/run in your terminal. 
+
+You will be presented with a brief welcome message and asked to make a selection from the list of main categories.
+
+2. Make a selection, by number, from the list of presented catrgories
+
+The gem will present a list of available services under the selected cateory.  The available services will be accompanied by a list of prices for each service.  Note that, depending on your selection, some services may require a consultation before pricing is made available.
+
+3. Choose to book an appointment, make a new selection, or exit the application
+
+You may choose to book an appointment based upon the available services list, make a new selection, which will give you a new list of available services,or exit the application
+
+When you book an appointment, the gem will present a Thank you notice and end the program.
+When you make a new selection, you will be presented with the initiail categories list from which to choose.
+When you exit the application, you will receive a Thank you message and the program will exit.
+
 
 ## Development
 
