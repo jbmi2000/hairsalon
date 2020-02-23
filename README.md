@@ -1,13 +1,13 @@
 # Hairsalon
 
-This gem is responsible for providing a way for customers of a hair salon to be able to see available services and then choose to book an appointment. The services arre broken down into 4 main categories.  They are:
+This gem is responsible for providing a way for customers of a hair salon to be able to see available services and then choose to book an appointment. The services are broken down into 4 main categories.  They are:
 
 Hair Services
 Color Services
 Hair Treatment Services
 Makeup
 
-This gem makes use of data that has been scraped from a local salon.  As users make a selection from the list of services above, they are presented with a 2nd list that details the services that are available under the seected category.  Customers are then given the option to book an appointment, make a new selection, or exit the application. 
+This gem makes use of data that has been scraped from a local salon.  As users make a selection from the list of services above, they are presented with a 2nd list that details the services that are available under the selected category.  Customers are then given the option to book an appointment, make a new selection, or exit the application. 
 
 ## Installation
 
@@ -32,9 +32,9 @@ To use this gem,
 
 You will be presented with a brief welcome message and asked to make a selection from the list of main categories.
 
-2. Make a selection, by number, from the list of presented catrgories
+2. Make a selection, by number, from the list of presented categories
 
-The gem will present a list of available services under the selected cateory.  The available services will be accompanied by a list of prices for each service.  Note that, depending on your selection, some services may require a consultation before pricing is made available.
+The gem will present a list of available services under the selected cateory.  The available services will be accompanied by prices for each service.  Note that, depending on your selection, some services may require a consultation before pricing is made available.
 
 3. Choose to book an appointment, make a new selection, or exit the application
 
